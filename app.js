@@ -2,11 +2,10 @@ const express = require("express");
 const app = express();
 const fs = require("fs");
 const bodyParser = require("body-parser");
-const carsRoute = require("./routes/cars");
+const carsRoute = require("./routes/car");
 
 const port = process.env.PORT || 3000;
-require('dotenv').config();
-
+require("dotenv").config();
 
 // var cars = fs.readFileSync("cars.json");
 let carRecord = require("./cars.json");
@@ -28,4 +27,4 @@ const save = () => {
   });
 };
 
-app.listen(3000);
+app.listen(3000, () => console.log("Server is running"));

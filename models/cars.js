@@ -7,7 +7,7 @@ const carSchema = {
       required: true,
       unique: true,
     },
-    type: {
+    model: {
       type: String,
       required: true,
     },
